@@ -34,3 +34,22 @@
 .privacy-policy:hover{
     text-decoration: underline;
 }
+
+/*Media Queries*/
+@media (max-width: 700px){
+    .banner{
+        background-size: 120rem;
+        background-position: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .login-wrapper{
+        translate: 0 -80%;
+        width: 80%;
+    }
+
+    .id-input, .submit{
+        width: 80px;
+    }
+}

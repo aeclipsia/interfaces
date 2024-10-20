@@ -92,3 +92,24 @@ a{
     box-shadow: 3px 3px 3px 3px var(--gray-800),
     inset 3px 3px 3px 3px rgb(202, 202, 202);
 }
+
+/*Media queries*/
+@media (max-width: 700px){
+    .menu-link-wrapper{
+        display: block;
+        padding: 20px 0;
+    }
+
+    .menu-link{
+        padding: 5px 0;
+    }
+
+    .icon-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icons{
+        margin: 20px 0;
+    }
+}
