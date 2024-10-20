@@ -1,0 +1,94 @@
+:root{
+    --orange: rgb(255,95,73);
+    --white: rgb(240,240,240);
+    --gray-400: #f2f2f2;
+    --gray-800: rgb(158, 158, 158);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.brand-header{
+    font-family: "Impact";
+    font-size: 4rem;
+    width: 100vw;
+    text-align: center;
+    background-color: var(--orange);
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.menu-link-wrapper{
+    display: flex;
+    list-style: none;
+    border-bottom: 0.2rem solid var(--orange);
+}
+
+a{
+    font-size: 20px;
+    letter-spacing: 0.25em;
+    color: var(--orange);
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.menu-link{
+    padding: 20px 0;
+    flex: 1;
+    text-align: center;
+}
+
+.menu-link:hover{
+    font-weight: 800;
+    text-shadow: 3px 3px 3px var(--gray-800);
+}
+
+.heading{
+    margin: 80px 20% 10vh 20%;
+    word-spacing: 12px;
+}
+
+.text-orange{
+    color: var(--orange);
+    font-style: italic;
+}
+
+.icon-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 20%;
+}
+
+.icons{
+    text-align: center;
+    background-color: var(--gray-400);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: relative;
+}
+
+.icon-number{
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.icon-text{
+    font-size: 0.8rem;
+}
+
+.icons:hover{
+    scale: 1.05;
+    box-shadow: 3px 3px 3px 3px var(--gray-800),
+    inset 3px 3px 3px 3px rgb(202, 202, 202);
+}
