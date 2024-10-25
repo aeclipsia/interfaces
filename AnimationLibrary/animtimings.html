@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            position: relative;
+            background-color: #ff7f7f;
+            width: 300px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 32px;
+            font-family: sans-serif;
+            animation: move 1.5s 1;
+            animation-fill-mode: forwards;
+            left: 0;
+        }
+
+        .ease{
+            animation-timing-function: ease;
+        }
+        .in{
+            animation-timing-function: ease-in;
+        }
+        .out{
+            animation-timing-function: ease-out;
+        }
+        .inout{
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes move{
+            to{
+                left: calc(200vh - 300px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ease">Ease</div>
+    <div class="in">Ease in</div>
+    <div class="out">Ease out</div>
+    <div class="inout">Ease in out</div>
+</body>
+</html>
