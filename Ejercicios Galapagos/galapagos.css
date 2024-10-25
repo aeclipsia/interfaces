@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Leaves";
+    src: url(enunciadoG/leaves_and_ground.ttf);
+}
+
+:root{
+    --gray-800: rgba(66,65,60,0.7);
+    --gray-400: #666;
+    --black: rgba(0,0,0,1);
+    --white: rgb(221, 221, 221);
+}
+
+.title{
+    text-align: center;
+    font-family: "Leaves";
+    letter-spacing: 20px;
+    font-size: 60px;
+    height: 75px;
+    animation: blink 4s ease-in-out infinite;
+    text-shadow: 3px 3px 3px var(--gray-400);
+}
+
+.banner{
+    background-image: url(enunciadoG/extendido.jpg);
+    position: relative;
+    height: calc(100vh - 75px);
+    background-size: cover;
+}
+
+.logo{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.menu-wrapper{
+    width: 50%;
+}
+
+/*Animaciones*/
+@keyframes blink{
+    0%{
+        color: var(--white);
+        letter-spacing: 2px;
+    }
+    50%{
+        color: var(--black);
+        letter-spacing: 20px;
+    }
+    100%{
+        color: var(--white);
+        letter-spacing: 2px;
+    }
+}
