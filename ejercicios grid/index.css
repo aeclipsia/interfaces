@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: sans-serif;
+  font-size: 15px;
+  outline: 1px red solid;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 960px;
+  display: grid;
+  grid-template-columns: 380px 176px 176px 176px;
+  grid-template-rows: 240px 200px 80px;
+  background-color: #dddddf;
+  justify-content: space-evenly;
+  padding: 1rem 0.5rem;
+  border: #ff9966 0.2rem solid;
+}
+
+.vertical-image {
+  background-image: url(imagenes/hombrepeque¤o.jpg);
+  grid-row: 1 / -1;
+  border: solid 0.2rem #eee;
+  position: relative;
+}
+
+.go-link {
+  position: absolute;
+  bottom: 10%;
+  left: 8%;
+}
+
+.heading {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.sublist,
+.sublist2 {
+  list-style-position: inside;
+  padding-inline-start: 1rem;
+}
+
+.sublist {
+  list-style-type: decimal;
+}
+
+.sublist2 {
+  list-style-type: upper-alpha;
+}
+
+.devices {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.device-image {
+  width: 125px;
+  height: auto;
+}
+
+.devices > p {
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  transition: all 0.15s ease-in-out;
+}
+
+.devices:hover > p {
+  opacity: 1;
+}
+
+footer {
+  grid-column: 2 / -1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-image {
+  width: 30px;
+  height: auto;
+  padding: 0.6rem;
+}
+
+.heading-title,
+.naranja {
+  color: #ff9966;
+}
