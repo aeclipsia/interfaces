@@ -4,7 +4,7 @@
   box-sizing: 0;
   font-family: sans-serif;
   font-size: 15px;
-  outline: 1px red solid;
+  /* outline: 1px red solid; */
 }
 
 body {
@@ -21,7 +21,7 @@ body {
   grid-template-rows: 240px 200px 80px;
   background-color: #dddddf;
   justify-content: space-evenly;
-  padding: 1rem 0.5rem;
+  /* padding: 1rem 0.5rem; */
   border: #ff9966 0.2rem solid;
 }
 
@@ -78,11 +78,38 @@ body {
   height: auto;
 }
 
+.devices > * {
+  transition: all 0.15s ease-in-out;
+}
+
 .devices > p {
   opacity: 0;
   position: absolute;
   bottom: 10px;
-  transition: all 0.15s ease-in-out;
+}
+
+.lenovo,
+.lenovo2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.lenovo {
+  opacity: 1;
+}
+
+.lenovo2 {
+  opacity: 0;
+}
+
+.devices:hover > .lenovo {
+  opacity: 0;
+}
+
+.devices:hover > .lenovo2 {
+  opacity: 1;
 }
 
 .devices:hover > p {
@@ -105,4 +132,34 @@ footer {
 .heading-title,
 .naranja {
   color: #ff9966;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100vw;
+    grid-template-columns: 100%;
+    grid-template-rows: 50vh 30vh 25vh 25vh 25vh 10vh;
+    padding: 1rem 2rem 0 2rem;
+  }
+
+  .container > * {
+    padding: 2rem;
+    /* grid-column: 1; */
+  }
+
+  .vertical-image {
+    grid-row: 1;
+  }
+
+  .heading {
+    grid-column: 1;
+  }
+
+  .devices {
+    grid-column: 1;
+  }
+
+  footer {
+    grid-column: 1;
+  }
 }

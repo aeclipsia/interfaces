@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not Hover cards</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* outline: red solid 1px; */
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .card-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+      }
+
+      .card {
+        width: 500px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3.2rem;
+        font-family: sans-serif;
+        border-radius: 2rem;
+        transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      }
+
+      .card:hover {
+        transform: scale(1.3);
+      }
+
+      .card-wrapper:hover > .card:not(:hover) {
+        transform: scale(0.8);
+        filter: blur(10px);
+      }
+
+      .red {
+        background-color: rgb(255, 130, 130);
+      }
+
+      .blue {
+        background-color: rgb(130, 130, 255);
+      }
+
+      .green {
+        background-color: rgb(130, 255, 130);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-wrapper">
+      <div class="card red">Card 1</div>
+      <div class="card green">Card 2</div>
+      <div class="card blue">Card 3</div>
+    </div>
+  </body>
+</html>
