@@ -81,3 +81,16 @@ body {
   animation: fadein 0.3s ease-in forwards;
   animation-delay: 1.2s;
 }
+
+@media screen and (max-width: 700px) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "estamos estamos"
+      "probando probando"
+      "css-grid css-grid"
+      "css-grid css-grid"
+      "areas areas";
+  }
+}
