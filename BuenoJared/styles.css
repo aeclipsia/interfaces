@@ -1,0 +1,275 @@
+/*Jared James Lloyd Bueno*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px red solid; */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+:root {
+  --color-verde: #799451;
+  --azul-claro: #b3c6ef;
+  --azul-oscuro: #475c6f;
+}
+
+@font-face {
+  font-family: WinterSelfie;
+  src: url(Winter\ Selfie.ttf);
+}
+
+.mayus {
+  font-family: "WinterSelfie";
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+}
+
+.header-title {
+  font-size: 3em;
+  color: var(--color-verde);
+}
+
+.hero-grid {
+  display: grid;
+  height: 68vh;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    ". foto rutas madrid ."
+    ". foto senderismo senderismo .";
+  gap: 10px;
+}
+
+.hero-grid > * {
+  border-radius: 10px;
+}
+
+.hero-foto {
+  grid-area: foto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  translate: -20% 0;
+  opacity: 0;
+  animation: entry 2s forwards ease-in-out;
+}
+
+.hero-foto > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: scale 2s ease-in-out;
+}
+
+.hero-foto:hover > img {
+  scale: 1.5;
+}
+
+.hero-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-text {
+  font-size: 2em;
+  text-shadow: 3px 3px 5px rgb(52, 52, 52);
+  transition: scale 2s ease-in-out;
+}
+
+.link-text:hover {
+  scale: 1.2;
+}
+
+.rutas {
+  grid-area: rutas;
+  background-color: var(--azul-claro);
+  translate: 0 -20%;
+  opacity: 0;
+  animation: entry 2s forwards ease-in-out;
+}
+
+.madrid {
+  grid-area: madrid;
+  background-color: var(--color-verde);
+  translate: 20% 0;
+  opacity: 0;
+  animation: entry 2s forwards ease-in-out;
+}
+
+.senderismo {
+  grid-area: senderismo;
+  background-color: var(--azul-oscuro);
+  translate: 0 20%;
+  opacity: 0;
+  animation: entry 2s forwards ease-in-out;
+}
+
+.frase {
+  padding: 7vh 0;
+  text-align: center;
+  font-style: italic;
+  color: var(--azul-oscuro);
+}
+
+.oscuro {
+  font-weight: bold;
+}
+
+#rutas {
+  background-color: var(--azul-oscuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 5em 2em;
+  position: relative;
+}
+
+#rutas * {
+  color: white;
+}
+
+.rutas-title {
+  font-size: 2em;
+}
+
+.rutas-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  width: 100%;
+}
+
+.rutas-fondo {
+  position: relative;
+  width: 20%;
+  height: 200px;
+  background-size: cover;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+.diarias {
+  background-image: url(Jared/pedriza.jpg);
+}
+
+.findes {
+  background-image: url(Jared/guadarrama.jpg);
+}
+
+.vacaciones {
+  background-image: url(Jared/rascafria.jpg);
+}
+
+.rutas-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(121, 148, 81, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: height 2s ease-in-out;
+  border-radius: 0 0 10px 10px;
+}
+
+.chat {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  right: 1%;
+  bottom: 5%;
+}
+
+.rutas-fondo:hover > .rutas-link {
+  height: 20%;
+}
+
+@keyframes entry {
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-title {
+    text-align: center;
+  }
+
+  .hero-grid {
+    grid-template-areas: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7fr 1fr 1fr 1fr;
+  }
+
+  .grid-cell {
+    grid-column: 1/-1;
+  }
+
+  .hero-foto {
+    grid-row: 1/2;
+  }
+
+  .hero-foto > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rutas {
+    grid-row: 2/3;
+  }
+
+  .madrid {
+    grid-row: 3/4;
+  }
+
+  .senderismo {
+    grid-row: 4/-1;
+  }
+
+  .frase {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+  }
+
+  #rutas {
+    padding: 2em 1.5em;
+  }
+
+  .rutas-wrapper {
+    flex-direction: column;
+  }
+
+  .rutas-fondo {
+    width: 100%;
+  }
+
+  .chat {
+    width: 35px;
+    height: 35px;
+    bottom: 1%;
+  }
+}
