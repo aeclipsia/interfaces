@@ -1,0 +1,13 @@
+.btn-morado {
+  background-color: #5b3a5b;
+  color: white;
+}
+
+body {
+  background: #9b90c8;
+  color: #5b3a5b;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+}
